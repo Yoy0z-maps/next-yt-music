@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/loading.jsx"
+    "components/loading.jsx",
+    "components/Header.tsx"
   ],
   "exclude": ["node_modules"]
 }

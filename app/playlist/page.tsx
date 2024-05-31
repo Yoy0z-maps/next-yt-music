@@ -1,4 +1,3 @@
-export default function Page(props) {
-  console.log(props);
-  return <div>playlist {props.searchParams.list}</div>;
+export default function PlaylistPage(props: any) {
+  return <div>Playlist: {props.searchParams.list}</div>;
 }

@@ -1,6 +1,6 @@
 "use client";
-import ErrorMessage from "@/components/ErrorMessage";
+import ErrorPage from "@/components/ErrorPage";
 
 export default function Error() {
-  return <ErrorMessage />;
+  return <ErrorPage />;
 }

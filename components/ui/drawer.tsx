@@ -48,7 +48,7 @@ const DrawerContent = React.forwardRef<
       )}
       {...props}
     >
-      {/*<div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />*/}
+      {/*<div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" /> Drawer 열었을 때 위의 선 안 보이게 주석처리*/}
       {children}
     </DrawerPrimitive.Content>
   </DrawerPortal>

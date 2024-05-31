@@ -1,3 +1,3 @@
-export default function Page() {
-  return <div>library</div>;
+export default function LibraryPage() {
+  return <div>Library</div>;
 }

@@ -1,4 +1,4 @@
-export default function Page(props) {
+export default function ChannelPage(props: any) {
   console.log(props);
-  return <div>channel:{props.params.id}</div>;
+  return <div>channel/{props.params.id}</div>;
 }
