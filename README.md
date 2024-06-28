@@ -67,3 +67,11 @@ yarn add next-themes
 
 - 다크모드 provider 제공
 - .dark 클래스에 다크 모드 관련 색상이 정의 된다.
+
+##### 커스텀 세팅
+
+tailwind.config.ts
+
+##### ETC
+
+interface https://m.blog.naver.com/pjt3591oo/222342618084

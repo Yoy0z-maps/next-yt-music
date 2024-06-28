@@ -12,7 +12,8 @@ export default function Sidebar({ children }: any) {
           <Navigator />
         </div>
       </nav>
-      <div className="flex-1">{children}</div>
+      {/* 데스크뷰에서 사이드바 공간을 제외한 나머지 공간을 children이 갖는다 */}
+      <div className="w-full lg:w-[calc(100%-240px)]">{children}</div>
     </div>
   );
 }

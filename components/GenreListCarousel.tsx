@@ -6,34 +6,33 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import PlaylistCard from "./PlaylistCard";
 import { chunkArray } from "@/lib/utils";
-import SongCard from "./SongCard";
+import GenreCard from "./GenreCard";
 
-interface SongListCarouselProps {
+interface GenreListCarouselProps {
   title: string;
   subTitle?: string;
   Thumbnail?: React.ReactNode;
-  songListTop10: TopSong[];
+  genreList: string[];
 }
 
-function SongColumn({ songList = [] }: { songList: TopSong[] }) {
+function GenreColumn({ genreList = [] }: { genreList: string[] }) {
   return (
     <div className="flex flex-col gap-4">
-      {songList.map((song, index) => {
-        return <SongCard key={index} song={song} />;
+      {genreList.map((genre, index) => {
+        return <GenreCard key={index} genre={genre} />;
       })}
     </div>
   );
 }
 
-const SongListCarousel: React.FC<SongListCarouselProps> = ({
+const GenreListCarousel: React.FC<GenreListCarouselProps> = ({
   title,
   subTitle,
   Thumbnail,
-  songListTop10,
+  genreList,
 }) => {
-  const chunkedTop10SontList = chunkArray(songListTop10, 4) as TopSong[][];
+  const chunkedGenretList = chunkArray(genreList, 4) as string[][];
 
   return (
     <div className="w-full">
@@ -58,10 +57,10 @@ const SongListCarousel: React.FC<SongListCarouselProps> = ({
           </div>
         </div>
         <CarouselContent className="mt-4">
-          {chunkedTop10SontList?.map((songList, index) => {
+          {chunkedGenretList?.map((genreList, index) => {
             return (
-              <CarouselItem key={index} className="lg:basis-1/2 xl:basis-1/3">
-                <SongColumn songList={songList} />
+              <CarouselItem key={index} className="basis-1/3 lg:basis-1/4">
+                <GenreColumn genreList={genreList} />
               </CarouselItem>
             );
           })}
@@ -71,4 +70,4 @@ const SongListCarousel: React.FC<SongListCarouselProps> = ({
   );
 };
 
-export default SongListCarousel;
+export default GenreListCarousel;
