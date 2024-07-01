@@ -27,7 +27,12 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "components/loading.jsx",
-    "components/Header.tsx"
+    "components/Header.jsx",
+    "components/PlayListHead.jsx",
+    "components/PlaylistCard.jsx",
+    "app/(main)/components/Category.jsx",
+    "app/playlist/page.jsx",
+    "components/HeaderBgChanger.jsx"
   ],
   "exclude": ["node_modules"]
 }
