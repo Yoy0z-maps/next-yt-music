@@ -11,6 +11,7 @@ export default async function PlaylistPage(props) {
   if (!playlist) permanentRedirect("/");
 
   const imageSrc = getRandomElementFromArray(playlist.songList)?.imageSrc;
+  console.log(imageSrc);
 
   return (
     <PagePadding>
