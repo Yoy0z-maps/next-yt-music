@@ -2,7 +2,7 @@
 import useUiState from "@/hooks/useUiState";
 import { useEffect } from "react";
 
-export default function HeaderBgChanger({ imageSrc }: { imageSrc: string }) {
+export default function HeaderBgChanger() {
   const { setHeaderImageSrc } = useUiState();
 
   useEffect(() => {

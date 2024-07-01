@@ -6,7 +6,7 @@ export default function Sidebar({ children }: any) {
     <div className="flex flex-row h-full">
       <nav className="hidden lg:block w-[240px] border-r-[1px] border-neutral-600">
         <div className="p-[24px]">
-          <Logo />
+          <Logo isInDrawer={false} onClickClose={() => {}} />
         </div>
         <div>
           <Navigator />

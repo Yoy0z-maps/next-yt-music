@@ -61,8 +61,8 @@ export default function Navigator() {
       </section>
       <section>
         <ul className="flex flex-col">
-          {dummyPlaylistArray.map((playlist) => {
-            return <PlaylistNav playlist={playlist} />;
+          {dummyPlaylistArray.map((playlist, index) => {
+            return <PlaylistNav key={index} playlist={playlist} />;
           })}
         </ul>
       </section>

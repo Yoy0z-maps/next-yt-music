@@ -12,7 +12,7 @@ import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import useUiState from "@/hooks/useUiState";
 
-export function HeaderDrawer({ children }: { children: React.ReactNode }) {
+export function HeaderDrawer({ children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -35,22 +35,24 @@ export function HeaderDrawer({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function Header({ children }: { children: React.ReactNode }) {
+export default function Header({ children }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const headRef = useRef();
 
   const { headerImageSrc } = useUiState();
 
   useEffect(() => {
+    const currentHeadRef = headRef.current;
+
     const handleScroll = () => {
       const scrollValue = headRef?.current?.scrollTop;
       console.log(scrollValue);
       setIsScrolled(scrollValue !== 0);
     };
 
-    headRef?.current?.addEventListener("scroll", handleScroll);
+    currentHeadRef.addEventListener("scroll", handleScroll);
     return () => {
-      headRef?.current?.removeEventListener("scroll", handleScroll);
+      currentHeadRef.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
