@@ -1,3 +1,4 @@
+"use client";
 import Logo from "./elements/Logo";
 import Navigator from "./elements/Navigator";
 
