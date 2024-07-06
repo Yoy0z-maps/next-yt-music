@@ -5,7 +5,7 @@ import usePlayerState from "@/hooks/usePlayerState";
 import { FaBell } from "react-icons/fa";
 import { FiMusic, FiShuffle } from "react-icons/fi";
 
-export default function ChannelHead({ channel }) {
+export default function ChannelHead({ channel }: { channel: any }) {
   const { addSongList } = usePlayerState();
   const onClickShuffle = () => {
     addSongList(channel.songList);
@@ -34,6 +34,7 @@ export default function ChannelHead({ channel }) {
             label="Music Station"
             icon={<FiMusic size={16} />}
             className=""
+            onClick={() => {}}
           />
         </div>
       </article>
@@ -48,6 +49,7 @@ export default function ChannelHead({ channel }) {
           label="Music Station"
           icon={<FiMusic size={16} />}
           className=""
+          onClick={() => {}}
         />
         <DarkButton
           label="Subscribing 43.8k"
