@@ -1,10 +1,17 @@
 "use client";
+import usePlayerState from "@/hooks/usePlayerState";
 import Logo from "./elements/Logo";
 import Navigator from "./elements/Navigator";
+import { cn } from "@/lib/utils";
 
 export default function Sidebar({ children }: any) {
+  const { addSongList } = usePlayerState();
+  const { isVisible } = usePlayerState();
+
   return (
-    <div className="flex flex-row h-full">
+    <div
+      className={cn("flex flex-row h-full", isVisible && "h-[calc(100vh-72])")}
+    >
       <nav className="hidden lg:block w-[240px] border-r-[1px] border-neutral-600">
         <div className="p-[24px]">
           <Logo isInDrawer={false} onClickClose={() => {}} />
